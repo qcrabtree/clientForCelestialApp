@@ -5,7 +5,7 @@ import CelestialTable from './CelestialTable';
 import CelestialEdit from './CelestialEdit';
 import CelestialCarousel from './CelestialCarousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-
+import APIURL from '../helpers/environment'
 class CelestialIndex extends Component{
 
     constructor(props) {
@@ -27,7 +27,7 @@ class CelestialIndex extends Component{
 
 
     fetchCelestials = () => {
-        fetch("http://localhost:3000/log/", {
+        fetch(`${APIURL}/log/`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ class CelestialIndex extends Component{
 
     celestialUpdate = (event, celestial) => {
         console.log(celestial);
-        fetch(`http://localhost:3000/log/${celestial.id}`, {
+        fetch(`${APIURL}/log/${celestial.id}`, {
             method: 'PUT',
             body: JSON.stringify({ log: celestial  }),
             headers: new Headers({
@@ -68,7 +68,7 @@ class CelestialIndex extends Component{
 
     
     celestialDelete = (event) => {
-        fetch(`http://localhost:3000/log/${event.target.id}`, {
+        fetch(`${APIURL}/log/${event.target.id}`, {
             method: 'DELETE',
             body: JSON.stringify({ log: { id: event.target.id } }),
             headers: new Headers({
