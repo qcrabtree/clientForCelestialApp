@@ -16,7 +16,7 @@ class Login extends Component {
     }
 
     handleSubmit = (event) => {
-        fetch(`${APIURL}user/login`, {
+        fetch(`https://celestial-server.herokuapp.com/user/login`, {
             method: 'POST',
             body: JSON.stringify({user:this.state}),
             headers: new Headers({

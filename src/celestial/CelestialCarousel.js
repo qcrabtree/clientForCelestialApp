@@ -8,7 +8,7 @@ import { Container, Col, Row} from 'reactstrap';
 
 
 const CelestialCarousel = (props) => {
-
+console.log(props.celestials)
 return (
   <div className="planetName">
   <Container>

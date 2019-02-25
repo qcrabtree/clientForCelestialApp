@@ -50,6 +50,7 @@ class CelestialIndex extends Component{
         })
         .then(res => res.json())
         .then((logData) => {
+            console.log(logData);
             return this.setState({ celestials: logData })
         })
     }
@@ -105,7 +106,7 @@ class CelestialIndex extends Component{
           <Container>
             <Row>
               <Col md="12">
-                  <CelestialCarousel celestials = {this.state.celestials}/>
+              <CelestialCarousel celestials = {this.state.celestials}/>
                 
               </Col>
             </Row>
@@ -119,12 +120,12 @@ class CelestialIndex extends Component{
             </Row>
 
             <Col md="12">
-             {
+             
+{
 
-                 this.state.updatePressed ? <CelestialEdit t={this.state.updatePressed} update={this.celestialUpdate} celestial={this.state.celestialToUpdate} />
-                : <div></div>
-                }
-
+    this.state.updatePressed ? <CelestialEdit t={this.state.updatePressed} update={this.celestialUpdate} celestial={this.state.celestialToUpdate} />
+   : <div></div>
+   }
             
             
             
@@ -135,3 +136,15 @@ class CelestialIndex extends Component{
 }
 
 export default CelestialIndex;
+
+/*
+{celestials}
+<CelestialCarousel celestials = {this.state.celestials}/>
+{
+
+                 this.state.updatePressed ? <CelestialEdit t={this.state.updatePressed} update={this.celestialUpdate} celestial={this.state.celestialToUpdate} />
+                : <div></div>
+                }
+
+    <CelestialCreate token={this.props.token} updateCelestialsArray={this.fetchCelestials} />
+*/

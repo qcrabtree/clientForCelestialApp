@@ -24,7 +24,7 @@ class CelestialCreate extends Component {
     handleSubmit = (event) => {
         console.log(this.state.image);
         event.preventDefault();
-        fetch(`${APIURL}/log/`, {
+        fetch(`${APIURL}log/`, {
             method: 'POST',
             body: JSON.stringify({ log: this.state }),
             headers: new Headers({
