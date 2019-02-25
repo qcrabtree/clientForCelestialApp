@@ -26,15 +26,29 @@ class CelestialIndex extends Component{
     }
 
 
+    // fetchCelestials = () => {
+    //     fetch(`${APIURL}/log/`, {
+    //         method: 'GET',
+    //         headers: new Headers({
+    //             'Content-Type': 'application/json',
+    //             'Authorization': this.props.token
+    //         })
+    //     })
+    //     .then((res) => res.json())
+    //     .then((logData) => {
+    //         return this.setState({ celestials: logData })
+    //     })
+    // }
+
     fetchCelestials = () => {
-        fetch(`${APIURL}/log/`, {
+        fetch(`${APIURL}log/`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
                 'Authorization': this.props.token
             })
         })
-        .then((res) => res.json())
+        .then(res => res.json())
         .then((logData) => {
             return this.setState({ celestials: logData })
         })
@@ -43,7 +57,7 @@ class CelestialIndex extends Component{
 
     celestialUpdate = (event, celestial) => {
         console.log(celestial);
-        fetch(`${APIURL}/log/${celestial.id}`, {
+        fetch(`${APIURL}log/${celestial.id}`, {
             method: 'PUT',
             body: JSON.stringify({ log: celestial  }),
             headers: new Headers({
@@ -68,7 +82,7 @@ class CelestialIndex extends Component{
 
     
     celestialDelete = (event) => {
-        fetch(`${APIURL}/log/${event.target.id}`, {
+        fetch(`${APIURL}log/${event.target.id}`, {
             method: 'DELETE',
             body: JSON.stringify({ log: { id: event.target.id } }),
             headers: new Headers({

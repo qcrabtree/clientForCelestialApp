@@ -22,7 +22,7 @@ class Signup extends Component {
 
 
     handleSubmit = (event) => {
-       fetch(`${APIURL}/user/user`, {
+       fetch(`${APIURL}user/user`, {
            method: 'POST',
            body: JSON.stringify({ user:this.state }),
            headers: new Headers({
@@ -31,6 +31,7 @@ class Signup extends Component {
        }).then(
            (response) => response.json()
        ).then((data) => {
+           console.log(data.sessionToken)
            this.props.setToken(data.sessionToken)
        })
        event.preventDefault()
