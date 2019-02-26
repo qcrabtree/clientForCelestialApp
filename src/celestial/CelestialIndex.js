@@ -103,7 +103,7 @@ class CelestialIndex extends Component{
           <CelestialTable celestials={this.state.celestials} delete={this.celestialDelete} update={this.setUpdatedCelestial} /> :
           <h2>Log a planet!</h2>
         return (
-          <Container>
+          <Container className="CelestialContentDiv">
             <Row>
               <Col md="12">
               <CelestialCarousel celestials = {this.state.celestials}/>
@@ -111,10 +111,10 @@ class CelestialIndex extends Component{
               </Col>
             </Row>
             <Row>
-                <Col>
+                <Col md="12">
                 <CelestialCreate token={this.props.token} updateCelestialsArray={this.fetchCelestials} />
                 </Col>
-              <Col md="9">
+              <Col  md="12">
               {celestials}
               </Col>
             </Row>

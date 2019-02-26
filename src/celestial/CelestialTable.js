@@ -5,13 +5,13 @@ import { Table, Button } from 'reactstrap';
 const CelestialTable = (props) => {
 
     return (
-        <div>
+        <div className='CelestialTableCSS'>
             <h3>Planet Log</h3>
             <hr />
             <Table striped>
                 <thead>
                     <tr>
-                        <th>#</th>
+                        <th>{}</th>
                         <th>Planet Name</th>
                         <th>Habitable</th>
                         <th>Description</th>
@@ -19,12 +19,12 @@ const CelestialTable = (props) => {
                         <th></th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="tableBody">
                     {
                         props.celestials.map((celestial, id) => {
                             return (
                                 <tr key={id}>
-                                    <th scope="row">{celestial.id}</th>
+                                    <th scope="row"></th>
                                     <td>{celestial.planetName}</td>
                                     <td>{celestial.habitable}</td>
                                     <td>{celestial.description}</td>

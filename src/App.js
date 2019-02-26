@@ -7,8 +7,9 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
+import './css/App.css'
 
-// import './App.css';
+
 
 class App extends Component {
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+    
     Navbar, 
     NavbarBrand,
     NavbarToggler,
@@ -8,6 +9,7 @@ import {
     Button,
     Collapse
 } from 'reactstrap';
+
 
 class SiteBar extends Component {
     constructor(props) {
@@ -28,7 +30,8 @@ class SiteBar extends Component {
         return (
             <div>
                 <Navbar color="faded" light expand="md">
-                <NavbarBrand href="/">Celestial App</NavbarBrand>
+
+                <NavbarBrand href="/" className="NavbarLogo"></NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="ml-auto" navbar>

@@ -16,7 +16,8 @@ class Login extends Component {
     }
 
     handleSubmit = (event) => {
-        fetch(`https://celestial-server.herokuapp.com/user/login`, {
+        event.preventDefault()
+        fetch(`${APIURL}user/login`, {
             method: 'POST',
             body: JSON.stringify({user:this.state}),
             headers: new Headers({
@@ -27,22 +28,21 @@ class Login extends Component {
         ).then((data) => {
             this.props.setToken(data.sessionToken)
         })
-        event.preventDefault()
     }
 
     render() {
         return (
             <div>
-                <h1>Login</h1>
-                <h6>OMGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG LOGIN LOOK QUIINNNNNNNN, WE DID IT</h6>
-                <Form>
+                <h2>Login</h2>
+                
+                <Form onSubmit= {this.handleSubmit}>
                     <FormGroup>
                         <Label for="username">Username</Label>
                         <Input id="li_username" type="text" name="username" placeholder="enter username" onChange={this.handleChange} />
                     </FormGroup>
                     <FormGroup>
                         <Label for="password">Password</Label>
-                        <Input id="li_password" type="password" name="password" placeholder="enter password" onChange={this.handleChange} />
+                        <Input id="li_password" type="password" name="password" placeholder="enter password" onChange={this.handleChange}  />
                     </FormGroup>
                     <Button type="submit">Submit</Button>
                 </Form>

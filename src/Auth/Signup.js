@@ -39,8 +39,8 @@ class Signup extends Component {
     render() {
         return (
             <div>
-                <h1>Signup</h1>
-                <h6>SIGNUP, TO BE TRULY GOOD, IT MUST BE WITHOUT WITNESS, WITHOUT REWARD</h6>
+                <h2>Signup</h2>
+
                 <Form onSubmit={this.handleSubmit} >
                     <FormGroup>
                         <Label for="username">Username</Label>

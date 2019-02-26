@@ -3,7 +3,7 @@ import CelestialIndex from '../celestial/CelestialIndex';
 
 const Splash = (props) => {
     return (
-        <div>
+        <div className ="SplashDiv">
             <CelestialIndex token={props.sessionToken} />
         </div>
     )
