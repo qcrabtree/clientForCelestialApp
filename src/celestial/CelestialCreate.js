@@ -52,7 +52,7 @@ class CelestialCreate extends Component {
                 <Form onSubmit={this.handleSubmit} >
                     <FormGroup>
                         <Label for="planetName">Planet Name</Label>
-                        <Input id="planetName" type="text" name="planetName" placeholder="Planet Name" onChange={this.handleChange} />
+                        <Input id="planetName" type="text" name="planetName" placeholder="Planet Name" value={this.state.planetName} onChange={this.handleChange} />
                     </FormGroup>
                     <FormGroup>
                         <Label for="Habitable?">Habitable?</Label>

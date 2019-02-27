@@ -1,7 +1,10 @@
 import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import THREE from './Celestial3D';
 import { Carousel } from 'react-responsive-carousel';
 import { Container, Col, Row} from 'reactstrap';
+import "../css/Carousel.css";
+// import CelestialDescripton from './CelestialDescripton';
 
 
 
@@ -19,9 +22,10 @@ return (
         props.celestials.map((celestial, id) => {
           return (
             <div key={id}>
+
               <data>{celestial.planetName}</data>
               <img src={celestial.image} />
-              <div className="description">
+              <div className="CarouselDescription">
               <p>{celestial.description}</p>
               </div>
               </div>

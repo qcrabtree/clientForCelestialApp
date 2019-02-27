@@ -51,7 +51,7 @@ class CelestialEdit extends React.Component {
                         </FormGroup>
                         <FormGroup>
                             <Label for="habitable">Habitable?</Label>
-                            <Input type="select" name="habitable" value={this.state.definition} onChange={this.handleChange} placeholder="Type">
+                            <Input type="select" name="habitable" value={this.state.habitable} onChange={this.handleChange} placeholder="Type">
                             <option></option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
