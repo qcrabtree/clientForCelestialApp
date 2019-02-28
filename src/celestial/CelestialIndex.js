@@ -50,7 +50,7 @@ class CelestialIndex extends Component{
         })
         .then(res => res.json())
         .then((logData) => {
-            console.log(logData);
+            
             return this.setState({ celestials: logData })
         })
     }

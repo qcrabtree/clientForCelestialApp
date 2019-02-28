@@ -31,7 +31,7 @@ class SiteBar extends Component {
             <div>
                 <Navbar color="faded" light expand="md">
 
-                <NavbarBrand href="/" className="NavbarLogo"></NavbarBrand>
+                <NavbarBrand href="/" className="NavbarLogo">Celestial App</NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="ml-auto" navbar>

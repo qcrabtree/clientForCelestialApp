@@ -11,7 +11,7 @@ import "../css/Carousel.css";
 
 
 const CelestialCarousel = (props) => {
-console.log(props.celestials)
+
 return (
   <div className="planetName">
   <Container>
@@ -24,7 +24,7 @@ return (
             <div key={id}>
 
               <data>{celestial.planetName}</data>
-              <img src={celestial.image} />
+              <img src={celestial.image} alt="planetimage"/>
               <div className="CarouselDescription">
               <p>{celestial.description}</p>
               </div>

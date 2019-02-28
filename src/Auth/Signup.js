@@ -31,7 +31,7 @@ class Signup extends Component {
        }).then(
            (response) => response.json()
        ).then((data) => {
-           console.log(data.sessionToken)
+           
            this.props.setToken(data.sessionToken)
        })
        event.preventDefault()
@@ -43,12 +43,12 @@ class Signup extends Component {
 
                 <Form onSubmit={this.handleSubmit} >
                     <FormGroup>
-                        <Label for="username">Username</Label>
-                        <Input id="li_username" type="text" name="username" placeholder="enter username" onChange={this.handleChange} />
+                        <Label for="username"></Label>
+                        <Input id="li_username" type="email" name="email" placeholder="enter email" onChange={this.handleChange} />
                     </FormGroup>
                     <FormGroup>
-                        <Label for="password">Password</Label>
-                        <Input id="li_password" type="password" name="password" placeholder="enter password" onChange={this.handleChange} />
+                        <Label for="password"></Label>
+                        <Input id="li_password" type="password" name="password" minlength="5" placeholder="enter password" onChange={this.handleChange} />
                     </FormGroup>
                     <Button type="submit"> Submit</Button>
                 </Form>
