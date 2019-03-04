@@ -1,6 +1,6 @@
 import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import THREE from './Celestial3D';
+// import THREE from './Celestial3D';
 import { Carousel } from 'react-responsive-carousel';
 import { Container, Col, Row} from 'reactstrap';
 import "../css/Carousel.css";

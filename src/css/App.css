@@ -23,7 +23,7 @@
   h1 {
     font-size: 100px;
     text-align: center;
-    text-emphasis-color: white;
+    color: white;
   }
 
   .Jumbo {
@@ -34,6 +34,10 @@
     background-image: url(../Assets/twinkling\ stars.gif);
     text-align: center;
     padding-left: 228px;
+  }
+
+  h3 {
+    color: white;
   }
 
 
@@ -78,3 +82,5 @@
   .CelestialTableCSS {
     padding-top: 100px;
   }
+
+ 

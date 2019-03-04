@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import '../css/signupLogin.css';
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import APIURL from '../helpers/environment';
 
